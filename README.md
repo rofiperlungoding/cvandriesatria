@@ -1,231 +1,97 @@
-# CV Andrie Satria - Promotional Merchandise Company Website
+# CV Andrie Satria - Premium Merchandise & Branding Specialist
 
-<div align="center">
-  <img src="public/Untitled design (12).png" alt="CV Andrie Satria Logo" width="200"/>
-  
-  <h3>🎯 Premium Promotional Merchandise Solutions</h3>
-  <p>Professional corporate website for CV Andrie Satria - Indonesia's trusted promotional merchandise specialist since 2013</p>
-  
-  [![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Website-blue?style=for-the-badge&logo=netlify)](https://joyful-gecko-bda4c3.netlify.app)
-  [![MIT License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://choosealicense.com/licenses/mit/)
-  [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
-  [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-  [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-</div>
+![Badge](https://img.shields.io/badge/Design-Industrial%20Luxury-black?style=for-the-badge)
+![Badge](https://img.shields.io/badge/Tech-React%20%2B%20Vite-61DAFB?style=for-the-badge&logo=react)
+![Badge](https://img.shields.io/badge/Styling-Tailwind%20CSS-38B2AC?style=for-the-badge&logo=tailwindcss)
+![Badge](https://img.shields.io/badge/Type-TypeScript-3178C6?style=for-the-badge&logo=typescript)
 
----
+> **"Extravagance in Minimalism."** A high-performance, aesthetically pleasing portfolio website designed with an "Industrial Luxury" philosophy.
 
-## 🌟 About The Project
+## 🌟 Overview
 
-CV Andrie Satria is a leading promotional merchandise company in Indonesia, serving clients since 2013. This modern, responsive website showcases their premium products and services with a focus on corporate branding solutions, custom merchandise, and promotional items.
+This project is a modern corporate portfolio for **CV Andrie Satria**, specializing in premium merchandise and exclusive branding. The website is built to reflect the company's core values: **Quality, Elegance, and Professionalism**.
 
-### ✨ Key Highlights
-- **12+ Years Experience** in promotional merchandise industry
-- **150+ Satisfied Clients** across various industries
-- **Premium Quality** products with guaranteed satisfaction
-- **Comprehensive Solutions** from design to delivery
+The design language moves away from traditional corporate styles, embracing a **monolith, typography-driven aesthetic** with subtle grid backgrounds, sticky layouts, and a stark black-and-white palette.
 
----
+## ✨ Key Features
 
-## 🚀 Features
+-   **🎨 Industrial Luxury Design**: A bespoke design system focusing on large typography, negative space, and subtle details (grid patterns, glassmorphism).
+-   **⚡ High Performance**: Built with Vite and React for ultra-fast loading and smooth transitions.
+-   **📱 Fully Responsive**: Flawless experience across all devices, from large desktop monitors to mobile phones.
+-   **🔍 SEO Optimized**: Semantic HTML and optimized assets for better search engine visibility.
+-   **♿ Accessibility**: Considered accessible contrast ratios and semantic structure.
+-   **🛠️ Modern Tech Stack**: Utilizing the latest ecosystem tools for reliability and scalability.
 
-### 🎨 **Modern Design**
-- Clean, professional UI/UX design
-- Glassmorphism effects and modern animations
-- Fully responsive across all devices
-- Dark theme with neon accent colors
+## 📸 Gallery
 
-### 📱 **User Experience**
-- Smooth scrolling and page transitions
-- Interactive hover effects and micro-interactions
-- Mobile-first responsive design
-- Optimized loading performance
+### Home Page - Hero Section
+*The first impression. Bold, authoritative, and clean.*
+![Home Hero](public/screenshots/home-hero.png)
 
-### 🛍️ **Product Showcase**
-- Comprehensive service and product catalog
-- High-quality product images
-- Detailed feature descriptions
-- Categorized service offerings
+### Services - Detail View
+*Asymmetrical layout with sticky typography for immersive reading.*
+![Service Detail](public/screenshots/service-detail.png)
 
-### 📞 **Business Features**
-- Professional contact forms
-- Direct communication channels
-- Client testimonials and case studies
-- Company information and credentials
+### Contact Page
+*Minimalist interface for high-value conversions.*
+![Contact Page](public/screenshots/contact-page.png)
 
----
+### Legal Pages (Privacy & Terms)
+*Maintaining brand consistency even in formal documents.*
+![Privacy Page](public/screenshots/privacy-page.png)
 
-## 🛠️ Built With
+## 🛠️ Technology Stack
 
-This website is built using modern web technologies for optimal performance and maintainability:
+-   **Framework**: [React](https://reactjs.org/) (v18)
+-   **Build Tool**: [Vite](https://vitejs.dev/)
+-   **Language**: [TypeScript](https://www.typescriptlang.org/)
+-   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+-   **Animations**: [Framer Motion](https://www.framer.com/motion/)
+-   **Icons**: [Lucide React](https://lucide.dev/)
+-   **Routing**: [React Router DOM](https://reactrouter.com/)
 
-### Frontend Framework
-- **[React 18](https://reactjs.org/)** - Modern JavaScript library for building user interfaces
-- **[TypeScript](https://www.typescriptlang.org/)** - Type-safe JavaScript development
-- **[React Router](https://reactrouter.com/)** - Declarative routing for React applications
+## � Getting Started
 
-### Styling & Design
-- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
-- **[Lucide React](https://lucide.dev/)** - Beautiful & consistent icon library
-- **Custom CSS** - Advanced animations and glassmorphism effects
-
-### Development Tools
-- **[Vite](https://vitejs.dev/)** - Next generation frontend tooling
-- **[ESLint](https://eslint.org/)** - Code quality and consistency
-- **[PostCSS](https://postcss.org/)** - CSS processing and optimization
-
-### Deployment
-- **[Netlify](https://netlify.com/)** - Modern web deployment platform
-
----
-
-## 📦 Installation & Setup
-
-Follow these steps to run the project locally:
+To run this project locally, follow these steps:
 
 ### Prerequisites
-- Node.js (version 16 or higher)
-- npm or yarn package manager
+-   Node.js (v18 or higher recommended)
+-   npm or yarn
 
-### Installation Steps
+### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/cv-andrie-satria.git
-   cd cv-andrie-satria
-   ```
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/rofiperlungoding/cvandriesatria.git
+    cd cvandriesatria
+    ```
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
+2.  **Install dependencies**
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
 
-3. **Start development server**
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
+3.  **Start Development Server**
+    ```bash
+    npm run dev
+    ```
+    Open `http://localhost:5173` in your browser.
 
-4. **Open your browser**
-   Navigate to `http://localhost:5173` to view the application
+## � Build for Production
 
-### Build for Production
+To create an optimized production build:
 
 ```bash
 npm run build
-# or
-yarn build
 ```
 
-The build files will be generated in the `dist` directory.
-
----
-
-## 📸 Screenshots
-
-### Homepage Hero Section
-*Clean, modern landing page with company branding and call-to-action*
-
-### Services & Products
-*Comprehensive showcase of merchandise categories and offerings*
-
-### Client Portfolio
-*Trusted by leading companies across various industries*
-
----
-
-## 📂 Project Structure
-
-```
-src/
-├── components/          # Reusable UI components
-│   ├── Header.tsx      # Navigation header
-│   ├── Footer.tsx      # Site footer
-│   ├── Contact.tsx     # Contact section
-│   └── Layout.tsx      # Page layout wrapper
-├── pages/              # Page components
-│   ├── HomePage.tsx    # Landing page
-│   ├── ServicesPage.tsx # Services & products
-│   ├── AboutPage.tsx   # Company information
-│   ├── ResultsPage.tsx # Client portfolio
-│   └── ContactPage.tsx # Contact page
-├── App.tsx             # Main application component
-├── main.tsx           # Application entry point
-└── index.css          # Global styles and utilities
-```
-
----
-
-## 🎯 Business Information
-
-### CV Andrie Satria Putra Utama
-**Established:** 2013  
-**Specialization:** Promotional Merchandise & Corporate Branding  
-
-**Services:**
-- Corporate Merchandise
-- Custom Apparel (T-shirts, Polo shirts, Hoodies)
-- Promotional Items (Tumbler, USB drives, Bags)
-- Digital & Offset Printing
-- Gift Sets & Custom Packaging
-
-**Vision:** *Menjadi perusahaan jasa, baik digital printing, offset printing, promotion item dan merchandising dengan mengedepankan mutu dan kualitas.*
-
-**Mission:** *Bekerja dengan jujur, cerdas dan profesional*
-
----
-
-## 📈 Performance & SEO
-
-- ⚡ **Fast Loading** - Optimized images and code splitting
-- 📱 **Mobile Responsive** - Perfect on all device sizes  
-- 🔍 **SEO Optimized** - Meta tags and structured data
-- ♿ **Accessible** - WCAG compliance and keyboard navigation
-- 🎨 **Modern Browser Support** - Compatible with latest browsers
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
+The output will be in the `dist/` directory, ready to be deployed to Vercel, Netlify, or any static host.
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Matches the proprietary nature of the business. All rights reserved by **CV Andrie Satria**.
 
 ---
-
-## 👨‍💻 Developer
-
-**Muhammad Rofi Darmawan**
-- 📧 Email: [rofi.darmawan@outlook.com](mailto:rofi.darmawan@outlook.com)
-- 💼 LinkedIn: [Connect with me](https://www.linkedin.com/in/muhammadrofidarmawan/)
-- 🌐 Portfolio: [View my work](https://your-portfolio-url.com)
-
----
-
-## 🙏 Acknowledgments
-
-- [React](https://reactjs.org/) for the amazing framework
-- [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS framework
-- [Lucide](https://lucide.dev/) for the beautiful icons
-- [Netlify](https://netlify.com/) for seamless deployment
-- All the amazing open-source contributors
-
----
-
-<div align="center">
-  <p>⭐ Star this repository if you found it helpful!</p>
-  <p>Built with ❤️ by Muhammad Rofi Darmawan</p>
-</div>
+*Built with passion for quality.*
