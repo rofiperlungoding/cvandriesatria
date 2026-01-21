@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { Package, Coffee, Usb, Clock, BookOpen, Shirt, Briefcase, ShoppingBag, PenTool, Gift, Users, Award, Volume2, Battery, Zap, Umbrella, ShoppingCart, Pin, Key, Archive, Circle } from 'lucide-react';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Package, Coffee, Usb, Clock, BookOpen, Shirt, Briefcase, ShoppingBag, PenTool, Gift, Users, Volume2, Battery, Umbrella, ShoppingCart, Pin, Key, Archive, Circle } from 'lucide-react';
 import Contact from '../components/Contact';
 import ServiceProductToggle from '../components/ServiceProductToggle';
 
@@ -204,33 +205,26 @@ const ServicesPage = () => {
   ];
 
   const renderServices = () => (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {services.map((service, index) => (
-        <div 
+        <div
           key={index}
-          className="glass-card rounded-2xl p-6 sm:p-8 hover:scale-105 transition-all duration-500 group relative overflow-hidden animate-fade-in"
-          style={{ animationDelay: `${index * 0.1}s` }}
+          className="p-8 rounded-3xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-300 group flex flex-col"
         >
-          {/* Hover Glow Effect */}
-          <div className="absolute inset-0 bg-gradient-to-r from-bolt-accent-blue/10 to-neon-blue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
-          
-          <div className="relative z-10">
-            <div className="mb-6">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 glass-card rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300 group-hover:shadow-neon">
-                <service.icon className="text-neon-blue group-hover:text-electric-blue transition-colors duration-300" size={24} />
-              </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 font-display group-hover:text-gradient transition-all duration-300">{service.title}</h3>
-              <p className="text-gray-300 leading-relaxed font-body text-sm sm:text-base">{service.description}</p>
-            </div>
+          <div className="w-14 h-14 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-6 group-hover:shadow-[0_0_25px_-5px_rgba(59,130,246,0.4)] transition-all duration-300">
+            <service.icon className="text-blue-400" size={28} strokeWidth={1.5} />
+          </div>
 
-            <div className="space-y-2 sm:space-y-3">
-              {service.features.map((feature, featureIndex) => (
-                <div key={featureIndex} className="flex items-center gap-2 sm:gap-3 group/feature">
-                  <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gradient-to-r from-bolt-accent-blue to-neon-blue rounded-full group-hover/feature:scale-125 transition-transform duration-200 flex-shrink-0" />
-                  <span className="text-gray-300 font-medium font-body group-hover:text-white transition-colors duration-300 text-sm sm:text-base">{feature}</span>
-                </div>
-              ))}
-            </div>
+          <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-200 transition-colors">{service.title}</h3>
+          <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">{service.description}</p>
+
+          <div className="space-y-2 pt-6 border-t border-white/5">
+            {service.features.map((feature, featureIndex) => (
+              <div key={featureIndex} className="flex items-center gap-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-500/50" />
+                <span className="text-gray-400 text-sm">{feature}</span>
+              </div>
+            ))}
           </div>
         </div>
       ))}
@@ -238,47 +232,37 @@ const ServicesPage = () => {
   );
 
   const renderProducts = () => (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
       {products.map((product, index) => (
-        <div 
+        <div
           key={index}
-          className="glass-card rounded-2xl hover:scale-105 transition-all duration-500 group relative overflow-hidden animate-fade-in"
-          style={{ animationDelay: `${index * 0.1}s` }}
+          className="p-6 rounded-3xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-300 group flex flex-col"
         >
-          {/* Hover Glow Effect */}
-          <div className="absolute inset-0 bg-gradient-to-r from-bolt-accent-blue/10 to-neon-blue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
-          
-          <div className="relative z-10">
-            {/* Seamless Product Image Header */}
-            <div className="w-full h-36 sm:h-48 overflow-hidden rounded-t-2xl bg-gradient-to-br from-white/5 to-white/10 flex items-center justify-center p-3 sm:p-4">
-              <img 
-                src={product.image}
-                alt={product.title}
-                className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
-              />
+          {/* Product Image */}
+          <div className="w-full h-48 rounded-2xl bg-white/[0.03] border border-white/5 p-4 mb-6 flex items-center justify-center overflow-hidden">
+            <img
+              src={product.image}
+              alt={product.title}
+              className="w-full h-full object-contain transition-transform duration-500"
+            />
+          </div>
+
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-8 h-8 rounded-full bg-blue-500/10 flex items-center justify-center shrink-0">
+              <product.icon className="text-blue-400" size={16} strokeWidth={1.5} />
             </div>
+            <h3 className="text-lg font-semibold text-white truncate">{product.title}</h3>
+          </div>
 
-            {/* Content Section */}
-            <div className="p-4 sm:p-6">
-              {/* Header with Icon and Title */}
-              <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                <product.icon className="text-neon-blue group-hover:text-electric-blue transition-colors duration-300 flex-shrink-0" size={18} />
-                <h3 className="text-lg sm:text-xl font-bold text-white font-display group-hover:text-gradient transition-all duration-300">{product.title}</h3>
+          <p className="text-gray-500 text-xs leading-relaxed mb-4 line-clamp-2">{product.description}</p>
+
+          <div className="space-y-1.5 mt-auto">
+            {product.features.slice(0, 3).map((feature, featureIndex) => (
+              <div key={featureIndex} className="flex items-center gap-2">
+                <span className="w-1 h-1 rounded-full bg-blue-500/40" />
+                <span className="text-gray-400 text-xs">{feature}</span>
               </div>
-
-              {/* Description */}
-              <p className="text-gray-300 text-xs sm:text-sm leading-relaxed font-body mb-3 sm:mb-4">{product.description}</p>
-
-              {/* Features */}
-              <div className="space-y-1.5 sm:space-y-2">
-                {product.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-center gap-2 group/feature">
-                    <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-gradient-to-r from-bolt-accent-blue to-neon-blue rounded-full group-hover/feature:scale-125 transition-transform duration-200 flex-shrink-0" />
-                    <span className="text-gray-400 text-xs font-medium font-body group-hover:text-gray-300 transition-colors duration-300">{feature}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       ))}
@@ -286,38 +270,42 @@ const ServicesPage = () => {
   );
 
   return (
-    <div className="bg-dark-primary">
-      <section className="py-16 sm:py-24 bg-dark-secondary relative overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-10 w-60 h-60 sm:w-72 sm:h-72 bg-gradient-to-r from-bolt-accent-blue/5 to-neon-blue/5 rounded-full blur-3xl animate-float" />
-          <div className="absolute bottom-20 right-10 w-72 h-72 sm:w-96 sm:h-96 bg-gradient-to-r from-electric-blue/5 to-bolt-accent-blue/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
+    <div className="bg-black min-h-screen pt-24 font-sans text-white">
+      <section className="max-w-7xl mx-auto px-6 pb-24">
+
+        <div className="text-center mb-16 animate-fade-in">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6 leading-tight">
+            Solusi Kami Yang Memberikan <span className="text-blue-400">Hasil Nyata</span>
+          </h1>
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed font-light">
+            Komprehensif {activeTab === 'services' ? 'layanan merchandise' : 'solusi produk'} dirancang untuk meningkatkan visibilitas merek Anda dan memperkuat hubungan bisnis Anda.
+          </p>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 pt-16 sm:pt-20">
-          <div className="text-center mb-12 sm:mb-16 animate-fade-in">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 sm:mb-6 font-display">
-              Solusi Kami Yang Memberikan
-              <span className="block text-gradient shimmer">Hasil Nyata</span>
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-body font-light px-2">
-              Komprehensif {activeTab === 'services' ? 'layanan merchandise' : 'solusi produk'} dirancang untuk meningkatkan visibilitas merek Anda dan 
-              <span className="text-neon-blue font-medium"> memperkuat hubungan bisnis</span> Anda.
-            </p>
-          </div>
+        {/* Toggle Component */}
+        <ServiceProductToggle
+          activeTab={activeTab}
+          onTabChange={setActiveTab}
+        />
 
-          {/* Toggle Component */}
-          <ServiceProductToggle 
-            activeTab={activeTab} 
-            onTabChange={setActiveTab} 
-          />
-
-          {/* Content based on active tab */}
-          {activeTab === 'services' ? renderServices() : renderProducts()}
+        {/* Content based on active tab */}
+        <div className="min-h-[500px]">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeTab}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            >
+              {activeTab === 'services' ? renderServices() : renderProducts()}
+            </motion.div>
+          </AnimatePresence>
         </div>
+
       </section>
-      
-      <Contact />
+
+      <Contact showBadge={false} />
     </div>
   );
 };

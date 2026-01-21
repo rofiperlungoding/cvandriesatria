@@ -1,5 +1,4 @@
-import React from 'react';
-import { Award, CheckCircle, Users } from 'lucide-react';
+import { Award, CheckCircle, Users, Target, Rocket } from 'lucide-react';
 import Contact from '../components/Contact';
 
 const AboutPage = () => {
@@ -27,49 +26,48 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="bg-dark-primary">
-      <section className="py-16 sm:py-24 bg-dark-primary relative overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 right-10 sm:right-20 w-60 h-60 sm:w-80 sm:h-80 bg-gradient-to-r from-neon-blue/5 to-electric-blue/5 rounded-full blur-3xl animate-float" />
-          <div className="absolute bottom-1/4 left-10 sm:left-20 w-48 h-48 sm:w-64 sm:h-64 bg-gradient-to-r from-bolt-accent-blue/5 to-neon-blue/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
-        </div>
+    <div className="bg-black font-sans text-white">
+      <section className="py-24 relative overflow-hidden">
+        {/* Background Gradients */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-[100px] -z-10" />
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/5 rounded-full blur-[80px] -z-10" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 pt-16 sm:pt-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 items-start">
-            
+        <div className="max-w-7xl mx-auto px-6 relative z-10 pt-16 sm:pt-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
             {/* Left Column - Main Content */}
-            <div className="space-y-6 sm:space-y-8 animate-fade-in">
-              <div>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 sm:mb-6 font-display">
-                  Mengenal
-                  <span className="block text-gradient shimmer">CV Andrie Satria</span>
+            <div className="space-y-12 animate-fade-in">
+              <div className="space-y-6">
+                <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight">
+                  Mengenal <span className="text-blue-400">CV Andrie Satria</span>
                 </h1>
-                <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-4 sm:mb-6 font-body font-light">
-                  Berdiri sejak 2013, CV Andrie Satria telah setia menemani perjalanan para pelanggan melalui pemenuhan dan penyediaan barang promosi yang kreatif dan menarik.
-                </p>
-                <p className="text-base sm:text-lg text-gray-400 leading-relaxed mb-4 sm:mb-6 font-body">
-                  Menyediakan barang-barang dengan kualitas tinggi dengan jaminan kualitas, CV Andrie Satria selalu memberikan yang terbaik dan berkomitmen untuk menjaga kepercayaan klien dengan kredibilitas yang tinggi.
-                </p>
-                <p className="text-base sm:text-lg text-gray-400 leading-relaxed font-body">
-                  Dengan motto "Bekerja dengan jujur, cerdas dan profesional" CV Andrie Satria siap menjadi partner dalam segala kebutuhan percetakan dan barang promosi di bisnis anda.
-                </p>
+                <div className="space-y-6 text-lg text-gray-400 leading-relaxed font-light">
+                  <p>
+                    Berdiri sejak 2013, CV Andrie Satria telah setia menemani perjalanan para pelanggan melalui pemenuhan dan penyediaan barang promosi yang kreatif dan menarik.
+                  </p>
+                  <p>
+                    Menyediakan barang-barang dengan kualitas tinggi dengan jaminan kualitas, CV Andrie Satria selalu memberikan yang terbaik dan berkomitmen untuk menjaga kepercayaan klien dengan kredibilitas yang tinggi.
+                  </p>
+                  <p>
+                    Dengan motto <span className="text-blue-200 italic">"Bekerja dengan jujur, cerdas dan profesional"</span> CV Andrie Satria siap menjadi partner dalam segala kebutuhan percetakan dan barang promosi di bisnis anda.
+                  </p>
+                </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+              {/* Achievements Grid - Integrated in Left Column */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {achievements.map((achievement, index) => (
-                  <div 
-                    key={index} 
-                    className="glass-card rounded-xl p-4 sm:p-6 hover:scale-105 transition-all duration-300 group animate-fade-in"
-                    style={{ animationDelay: `${index * 0.1}s` }}
+                  <div
+                    key={index}
+                    className="p-6 rounded-3xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-300 group"
                   >
-                    <div className="flex items-start gap-3 sm:gap-4">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 glass-card rounded-xl flex items-center justify-center flex-shrink-0 group-hover:shadow-neon transition-shadow duration-300">
-                        <achievement.icon className="text-neon-blue group-hover:text-electric-blue transition-colors duration-300" size={20} />
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+                        <achievement.icon className="text-blue-400" size={24} strokeWidth={1.5} />
                       </div>
                       <div>
-                        <h3 className="font-bold text-white mb-1 sm:mb-2 font-display group-hover:text-gradient transition-all duration-300 text-sm sm:text-base">{achievement.title}</h3>
-                        <p className="text-gray-400 text-xs sm:text-sm font-body">{achievement.description}</p>
+                        <h3 className="font-semibold text-white mb-1 group-hover:text-blue-300 transition-colors">{achievement.title}</h3>
+                        <p className="text-gray-500 text-sm leading-relaxed">{achievement.description}</p>
                       </div>
                     </div>
                   </div>
@@ -77,55 +75,69 @@ const AboutPage = () => {
               </div>
             </div>
 
-            {/* Right Column - Vision & Mission */}
-            <div className="space-y-6 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <h3 className="text-2xl sm:text-3xl font-bold text-white font-display">Visi & Misi</h3>
-              
-              <div className="glass-card rounded-xl p-6 sm:p-8 space-y-6 sm:space-y-8">
+            {/* Right Column - Vision & Mission (Sticky) */}
+            <div className="space-y-8 animate-fade-in lg:pt-12 lg:sticky lg:top-24">
+
+              {/* Visi Misi Card */}
+              <div className="p-8 rounded-3xl border border-white/10 bg-white/[0.02] space-y-8 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-3xl -z-10" />
+
+                {/* Visi */}
                 <div>
-                  <h4 className="text-xl sm:text-2xl font-semibold text-neon-blue mb-3 sm:mb-4 font-display">Visi:</h4>
-                  <p className="text-gray-300 leading-relaxed font-body text-base sm:text-lg">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2 bg-blue-500/10 rounded-lg border border-blue-500/20">
+                      <Target className="text-blue-400" size={24} strokeWidth={1.5} />
+                    </div>
+                    <h4 className="text-2xl font-semibold text-white">Visi</h4>
+                  </div>
+                  <p className="text-gray-400 leading-relaxed pl-12 border-l border-white/5 ml-5 py-2">
                     Menjadi perusahaan jasa, baik digital printing, offset printing, promotion item dan merchandising dengan mengedepankan mutu dan kualitas.
                   </p>
                 </div>
-                
+
+                <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent my-6" />
+
+                {/* Misi */}
                 <div>
-                  <h4 className="text-xl sm:text-2xl font-semibold text-neon-blue mb-3 sm:mb-4 font-display">Misi:</h4>
-                  <ul className="space-y-3 sm:space-y-4 text-gray-300 font-body">
-                    <li className="flex items-start gap-3 sm:gap-4">
-                      <div className="w-2 h-2 sm:w-3 sm:h-3 bg-gradient-to-r from-bolt-accent-blue to-neon-blue rounded-full mt-2 flex-shrink-0" />
-                      <span className="text-base sm:text-lg leading-relaxed">Mengutamakan kualitas produk yang dibutuhkan oleh konsumen.</span>
-                    </li>
-                    <li className="flex items-start gap-3 sm:gap-4">
-                      <div className="w-2 h-2 sm:w-3 sm:h-3 bg-gradient-to-r from-bolt-accent-blue to-neon-blue rounded-full mt-2 flex-shrink-0" />
-                      <span className="text-base sm:text-lg leading-relaxed">Memberikan service yang memuaskan bagi konsumen.</span>
-                    </li>
-                    <li className="flex items-start gap-3 sm:gap-4">
-                      <div className="w-2 h-2 sm:w-3 sm:h-3 bg-gradient-to-r from-bolt-accent-blue to-neon-blue rounded-full mt-2 flex-shrink-0" />
-                      <span className="text-base sm:text-lg leading-relaxed">Menjunjung profesionalitas dalam bekerja.</span>
-                    </li>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2 bg-blue-500/10 rounded-lg border border-blue-500/20">
+                      <Rocket className="text-blue-400" size={24} strokeWidth={1.5} />
+                    </div>
+                    <h4 className="text-2xl font-semibold text-white">Misi</h4>
+                  </div>
+                  <ul className="space-y-4 text-gray-400 pl-12 border-l border-white/5 ml-5 py-2">
+                    {[
+                      'Mengutamakan kualitas produk yang dibutuhkan oleh konsumen.',
+                      'Memberikan service yang memuaskan bagi konsumen.',
+                      'Menjunjung profesionalitas dalam bekerja.'
+                    ].map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-3 group">
+                        <CheckCircle className="text-blue-500/40 w-5 h-5 mt-0.5 shrink-0 group-hover:text-blue-400 transition-colors" />
+                        <span className="leading-relaxed group-hover:text-gray-300 transition-colors">{item}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
 
-              {/* Company Values Card */}
-              <div className="glass-card rounded-xl p-6 sm:p-8 group hover:scale-105 transition-all duration-300">
-                <div className="text-center">
-                  <h4 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4 font-display group-hover:text-gradient transition-all duration-300">Motto Kami</h4>
-                  <blockquote className="text-xl sm:text-2xl font-bold text-gradient italic font-display mb-3 sm:mb-4">
-                    "Bekerja dengan jujur, cerdas dan profesional"
-                  </blockquote>
-                  <p className="text-gray-400 font-body text-sm sm:text-base">
-                    Prinsip panduan yang mendorong segala yang kami lakukan di CV Andrie Satria
-                  </p>
-                </div>
+              {/* Motto Card (Accent) */}
+              <div className="p-8 rounded-3xl border border-blue-500/20 bg-blue-900/10 group hover:border-blue-500/30 transition-all duration-300 text-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <h4 className="text-sm font-medium text-blue-300 uppercase tracking-widest mb-4 relative z-10">Motto Kami</h4>
+                <blockquote className="text-2xl md:text-3xl font-bold text-white italic mb-4 leading-normal relative z-10">
+                  "Bekerja dengan jujur, cerdas dan profesional"
+                </blockquote>
+                <p className="text-gray-500 text-sm relative z-10">
+                  Prinsip panduan yang mendorong dedikasi kami.
+                </p>
               </div>
             </div>
+
           </div>
         </div>
       </section>
-      
-      <Contact />
+
+      <Contact showBadge={false} />
     </div>
   );
 };

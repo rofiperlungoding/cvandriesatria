@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -10,133 +9,82 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-dark-secondary text-white py-16 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-10 left-1/3 w-64 h-64 bg-gradient-to-r from-bolt-accent-blue/5 to-neon-blue/5 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-10 right-1/3 w-80 h-80 bg-gradient-to-r from-electric-blue/5 to-bolt-accent-blue/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
-      </div>
-
+    <footer className="bg-black border-t border-white/5 text-white py-16 relative overflow-hidden font-sans">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-          
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+
           {/* Brand Section */}
-          <div className="col-span-1 md:col-span-2 animate-fade-in">
+          <div className="col-span-1 md:col-span-2">
             <Link to="/" className="inline-block mb-6 group">
-              <div className="glass-card rounded-2xl p-4 hover:scale-105 transition-all duration-300 hover:shadow-neon group-hover:bg-white/5">
-                <img 
-                  src="/Untitled design (12).png" 
-                  alt="CV Andrie Satria Logo" 
-                  className="h-12 w-auto transition-all duration-300"
-                  style={{
-                    filter: 'brightness(0) invert(1)',
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.filter = 'brightness(1) invert(0)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.filter = 'brightness(0) invert(1)';
-                  }}
-                />
-              </div>
+              <img
+                src="/Untitled design (12).png"
+                alt="CV Andrie Satria Logo"
+                className="h-12 w-auto opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                style={{ filter: 'brightness(0) invert(1)' }}
+              />
             </Link>
-            <p className="text-gray-400 leading-relaxed mb-6 max-w-md font-body">
-              Memberdayakan bisnis dengan solusi merchandise premium yang membangun identitas merek, meningkatkan loyalitas pelanggan, dan mendorong penjualan melalui 
-              <span className="text-neon-blue"> strategi produk yang inovatif</span>.
+            <p className="text-gray-500 leading-relaxed mb-6 max-w-md text-sm">
+              Memberdayakan bisnis dengan solusi merchandise premium yang membangun identitas merek, meningkatkan loyalitas pelanggan, dan mendorong penjualan melalui
+              <span className="text-blue-400"> strategi inovatif</span>.
             </p>
           </div>
 
           {/* Services */}
-          <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            <h4 className="font-semibold mb-6 text-white font-display text-lg">Layanan & Produk</h4>
-            <ul className="space-y-3 text-gray-400 font-body">
-              <li>
-                <Link to="/services" className="hover:text-neon-blue transition-colors duration-300 flex items-center gap-2 group">
-                  <div className="w-1 h-1 bg-neon-blue rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  Pengembangan Produk
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="hover:text-neon-blue transition-colors duration-300 flex items-center gap-2 group">
-                  <div className="w-1 h-1 bg-neon-blue rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  Merchandise Branding
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="hover:text-neon-blue transition-colors duration-300 flex items-center gap-2 group">
-                  <div className="w-1 h-1 bg-neon-blue rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  Solusi Kustom
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="hover:text-neon-blue transition-colors duration-300 flex items-center gap-2 group">
-                  <div className="w-1 h-1 bg-neon-blue rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  Jaminan Kualitas
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="hover:text-neon-blue transition-colors duration-300 flex items-center gap-2 group">
-                  <div className="w-1 h-1 bg-neon-blue rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  Pesanan Jumlah Besar
-                </Link>
-              </li>
+          <div>
+            <h4 className="font-semibold mb-6 text-white text-base tracking-wide">Layanan & Produk</h4>
+            <ul className="space-y-3 text-gray-500 text-sm">
+              {[
+                { name: 'Pengembangan Produk', slug: 'pengembangan-produk' },
+                { name: 'Merchandise Branding', slug: 'merchandise-branding' },
+                { name: 'Solusi Kustom', slug: 'solusi-kustom' },
+                { name: 'Jaminan Kualitas', slug: 'jaminan-kualitas' },
+                { name: 'Pesanan Jumlah Besar', slug: 'pesanan-jumlah-besar' }
+              ].map((item) => (
+                <li key={item.slug}>
+                  <Link to={`/service/${item.slug}`} className="hover:text-blue-400 transition-all duration-300 flex items-center gap-2 group hover:translate-x-1">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Quick Links */}
-          <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <h4 className="font-semibold mb-6 text-white font-display text-lg">Tautan Cepat</h4>
-            <ul className="space-y-3 text-gray-400 font-body">
-              <li>
-                <Link to="/" className="hover:text-neon-blue transition-colors duration-300 flex items-center gap-2 group">
-                  <div className="w-1 h-1 bg-neon-blue rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  Beranda
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="hover:text-neon-blue transition-colors duration-300 flex items-center gap-2 group">
-                  <div className="w-1 h-1 bg-neon-blue rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  Layanan & Produk
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className="hover:text-neon-blue transition-colors duration-300 flex items-center gap-2 group">
-                  <div className="w-1 h-1 bg-neon-blue rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  Tentang Kami
-                </Link>
-              </li>
-              <li>
-                <Link to="/results" className="hover:text-neon-blue transition-colors duration-300 flex items-center gap-2 group">
-                  <div className="w-1 h-1 bg-neon-blue rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  Klien Kami
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="hover:text-neon-blue transition-colors duration-300 flex items-center gap-2 group">
-                  <div className="w-1 h-1 bg-neon-blue rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  Kontak
-                </Link>
-              </li>
+          <div>
+            <h4 className="font-semibold mb-6 text-white text-base tracking-wide">Tautan Cepat</h4>
+            <ul className="space-y-3 text-gray-500 text-sm">
+              {[
+                { name: 'Beranda', path: '/' },
+                { name: 'Layanan & Produk', path: '/services' },
+                { name: 'Tentang Kami', path: '/about' },
+                { name: 'Klien Kami', path: '/results' },
+                { name: 'Kontak', path: '/contact' }
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link to={link.path} className="hover:text-blue-400 transition-all duration-300 flex items-center gap-2 group hover:translate-x-1">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-glass-blue-border pt-8 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm font-body">
-              © {currentYear} CV Andrie Satria Putra Utama. Semua hak dilindungi. Dibuat dengan dedikasi untuk keunggulan produk.
+        <div className="border-t border-white/5 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <p className="text-gray-600 text-xs">
+              © {currentYear} CV Andrie Satria Putra Utama. All rights reserved.
             </p>
-            <div className="flex items-center space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-neon-blue transition-colors duration-300 text-sm font-body">Kebijakan Privasi</a>
-              <a href="#" className="text-gray-400 hover:text-neon-blue transition-colors duration-300 text-sm font-body">Syarat Layanan</a>
-              
-              {/* Back to Top Button */}
+            <div className="flex items-center space-x-6">
+              <Link to="/privacy" className="text-gray-600 hover:text-blue-400 transition-colors duration-300 text-xs">Kebijakan Privasi</Link>
+              <Link to="/terms" className="text-gray-600 hover:text-blue-400 transition-colors duration-300 text-xs">Syarat Layanan</Link>
+
               <button
                 onClick={scrollToTop}
-                className="glass-card w-10 h-10 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 group hover:shadow-neon"
+                className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 hover:border-blue-500/30 transition-all duration-300 group"
               >
-                <ArrowUp className="text-neon-blue group-hover:text-electric-blue transition-colors duration-300" size={16} />
+                <ArrowUp className="text-gray-500 group-hover:text-blue-400 transition-colors duration-300" size={14} />
               </button>
             </div>
           </div>
