@@ -1,97 +1,68 @@
-# CV Andrie Satria - Premium Merchandise & Branding Specialist
+# CV ANDRIE SATRIA(1) User Manual
 
-![Badge](https://img.shields.io/badge/Design-Industrial%20Luxury-black?style=for-the-badge)
-![Badge](https://img.shields.io/badge/Tech-React%20%2B%20Vite-61DAFB?style=for-the-badge&logo=react)
-![Badge](https://img.shields.io/badge/Styling-Tailwind%20CSS-38B2AC?style=for-the-badge&logo=tailwindcss)
-![Badge](https://img.shields.io/badge/Type-TypeScript-3178C6?style=for-the-badge&logo=typescript)
+![Branding: Industrial Luxury](https://img.shields.io/badge/DESIGN-INDUSTRIAL_LUXURY-black?style=for-the-badge&labelColor=555555)
+![Type: Professional Portfolio](https://img.shields.io/badge/TYPE-DIGITAL_RESUME-FFD700?style=for-the-badge&labelColor=555555&logo=cachet)
+![UI: Framer Motion](https://img.shields.io/badge/ANIMATION-FRAMER_MOTION-0055FF?style=for-the-badge&labelColor=555555&logo=framer)
+![Environment: React 18](https://img.shields.io/badge/ENV-REACT_18-61DAFB?style=for-the-badge&labelColor=555555&logo=react)
 
-> **"Extravagance in Minimalism."** A high-performance, aesthetically pleasing portfolio website designed with an "Industrial Luxury" philosophy.
+![Styling: Tailwind CSS 3](https://img.shields.io/badge/STYLING-TAILWIND_3-38B2AC?style=for-the-badge&labelColor=555555&logo=tailwind-css)
+![Build: Vite](https://img.shields.io/badge/BUILD-VITE-646CFF?style=for-the-badge&labelColor=555555&logo=vite)
+![Type: TypeScript](https://img.shields.io/badge/LANGUAGE-TYPESCRIPT-3178C6?style=for-the-badge&labelColor=555555&logo=typescript)
 
-## 🌟 Overview
+## NAME
+CV Andrie Satria — High-performance, interactive digital professional portfolio.
 
-This project is a modern corporate portfolio for **CV Andrie Satria**, specializing in premium merchandise and exclusive branding. The website is built to reflect the company's core values: **Quality, Elegance, and Professionalism**.
+## SYNOPSIS
+```bash
+npm run dev
+npm run build
+npm run lint
+```
 
-The design language moves away from traditional corporate styles, embracing a **monolith, typography-driven aesthetic** with subtle grid backgrounds, sticky layouts, and a stark black-and-white palette.
+## DESCRIPTION
+CV Andrie Satria is a state-of-the-art digital resume and professional portfolio platform. It is engineered to provide an immersive, fluid, and high-impact presentation of professional experience, skills, and projects. Leveraging modern motion design and precision typography, the system ensures an elite-level user experience across all device segments.
 
-## ✨ Key Features
+The platform is architected for maximum visual fidelity and interactive performance, utilizing hardware-accelerated animations and an optimized asset delivery pipeline to represent professional authority in the digital space.
 
--   **🎨 Industrial Luxury Design**: A bespoke design system focusing on large typography, negative space, and subtle details (grid patterns, glassmorphism).
--   **⚡ High Performance**: Built with Vite and React for ultra-fast loading and smooth transitions.
--   **📱 Fully Responsive**: Flawless experience across all devices, from large desktop monitors to mobile phones.
--   **🔍 SEO Optimized**: Semantic HTML and optimized assets for better search engine visibility.
--   **♿ Accessibility**: Considered accessible contrast ratios and semantic structure.
--   **🛠️ Modern Tech Stack**: Utilizing the latest ecosystem tools for reliability and scalability.
+## ARCHITECTURE
+Comprehensive overview of the technology stack and presentation engine:
 
-## 📸 Gallery
+- **Frontend Core**: React 18 / Vite / TypeScript
+- **Motion Orchestration**: Framer Motion (Hardware Accelerated)
+- **Styling Architecture**: Tailwind CSS 3 (Utility-first system)
+- **Typography Engine**: Inter (Fontsource integrated)
+- **Component System**: Lucide-React / Clsx / Tailwind-Merge
+- **Navigation Architecture**: React Router DOM
 
-### Home Page - Hero Section
-*The first impression. Bold, authoritative, and clean.*
-![Home Hero](public/screenshots/home-hero.png)
+## SYSTEM REQUIREMENTS
+- Node.js LTS version 18.x or higher.
+- Modern web browser with hardware acceleration enabled for optimal animation performance.
 
-### Services - Detail View
-*Asymmetrical layout with sticky typography for immersive reading.*
-![Service Detail](public/screenshots/service-detail.png)
+## INSTALLATION AND SETUP
 
-### Contact Page
-*Minimalist interface for high-value conversions.*
-![Contact Page](public/screenshots/contact-page.png)
+### 1. Environment Initialization
+```bash
+git clone https://github.com/rofiperlungoding/cvandriesatria.git
+cd cvandriesatria
+```
 
-### Legal Pages (Privacy & Terms)
-*Maintaining brand consistency even in formal documents.*
-![Privacy Page](public/screenshots/privacy-page.png)
+### 2. Dependency Resolution
+```bash
+npm install
+```
 
-## 🛠️ Technology Stack
+### 3. Execution (Development)
+```bash
+npm run dev
+```
 
--   **Framework**: [React](https://reactjs.org/) (v18)
--   **Build Tool**: [Vite](https://vitejs.dev/)
--   **Language**: [TypeScript](https://www.typescriptlang.org/)
--   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
--   **Animations**: [Framer Motion](https://www.framer.com/motion/)
--   **Icons**: [Lucide React](https://lucide.dev/)
--   **Routing**: [React Router DOM](https://reactrouter.com/)
-
-## � Getting Started
-
-To run this project locally, follow these steps:
-
-### Prerequisites
--   Node.js (v18 or higher recommended)
--   npm or yarn
-
-### Installation
-
-1.  **Clone the repository**
-    ```bash
-    git clone https://github.com/rofiperlungoding/cvandriesatria.git
-    cd cvandriesatria
-    ```
-
-2.  **Install dependencies**
-    ```bash
-    npm install
-    # or
-    yarn install
-    ```
-
-3.  **Start Development Server**
-    ```bash
-    npm run dev
-    ```
-    Open `http://localhost:5173` in your browser.
-
-## � Build for Production
-
-To create an optimized production build:
-
+### 4. Production Build
 ```bash
 npm run build
 ```
 
-The output will be in the `dist/` directory, ready to be deployed to Vercel, Netlify, or any static host.
+## GOVERNANCE AND STANDARDS
+The system adheres to modern web standards for performance and accessibility. All interactive layers are optimized for fluid 60fps transitions using Framer Motion's declarative animation system.
 
-## 📄 License
-
-Matches the proprietary nature of the business. All rights reserved by **CV Andrie Satria**.
-
----
-*Built with passion for quality.*
+## LICENSE
+Copyright (c) 2026 rofiperlungoding. Distributed under the MIT License.

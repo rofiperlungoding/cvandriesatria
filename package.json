@@ -1,8 +1,26 @@
 {
-  "name": "vite-react-typescript-starter",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@rofiperlungoding/cvandriesatria",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "private": false,
+  "version": "1.0.0",
+  "description": "Enterprise-grade digital portfolio platform with advanced Framer Motion animations and professional typography.",
   "type": "module",
+  "author": "rofiperlungoding <opikopi32@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rofiperlungoding/cvandriesatria.git"
+  },
+  "keywords": [
+    "portfolio",
+    "cv",
+    "react",
+    "framer-motion",
+    "typescript",
+    "enterprise-design"
+  ],
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
